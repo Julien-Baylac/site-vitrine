@@ -1,23 +1,38 @@
 <template>
-  <div class="contact">
-    <p>Vous pouvez me contact pour la création d'un site ou d'une applicaition</p>
+  <div class="contact uk-position-center">
+    <div class="">
+      <SocialNetworkBar class="uk-position-right"></SocialNetworkBar>
+    </div>
+    <hr>
+    <p>{{ $t('form.message') }}</p>
     <Form class="form"></Form>
   </div>
 </template>
 
 <script>
-import Form from '@/components/Form';
+import Form from '@/components/Form'
+import SocialNetworkBar from '@/components/SocialNetworkBar'
 
 export default {
   name: 'contact',
   components: {
-    Form
-  }
+    Form,
+    SocialNetworkBar
+  },
+  data () {
+    return {
+        locale: 'en'
+    }
+},
 }
 </script>
 
 <style lang="scss" scoped>
-.form {
-
+hr {
+  margin-top: 60px;
+  margin-bottom: 40px
+}
+.mail-contact {
+  display: flex
 }
 </style>
