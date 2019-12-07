@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <p>home</p>
+    <p>home --------></p>
   </div>
 </template>
 
@@ -10,3 +10,6 @@ export default {
   name: 'home',
 }
 </script>
+
+<style lang="scss" scoped>
+</style>

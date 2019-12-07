@@ -1,6 +1,5 @@
 <template>
   <div class="about">
-    <p>about</p>
   </div>
 </template>
 
@@ -10,3 +9,6 @@ export default {
   name: 'about',
 }
 </script>
+
+<style lang="scss" scoped>
+</style>
