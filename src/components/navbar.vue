@@ -28,7 +28,7 @@
         </vk-navbar-nav>
         <vk-navbar-nav slot="right" class="translate">
         <vk-navbar-nav-dropdown :title="$t('nav.translate')" slot='right' navbar-aligned align="right">
-          <vk-navbar-nav-dropdown-nav class="uk-align-right">
+          <vk-navbar-nav-dropdown-nav class="uk-align-right translation">
             <vk-nav-item :title="$t('locales.lang')" active></vk-nav-item>
             <vk-nav-item :title="$t('locales.fr')" @click="change_lang('fr')"></vk-nav-item>
             <vk-nav-item :title="$t('locales.en')" @click="change_lang('en')"></vk-nav-item>
@@ -59,8 +59,10 @@ a {
   color: grey;
   text-decoration: none !important
 }
-.transparent {
-  background-color: transparent
+.translation {
+  a {
+    text-align : right
+  }
 }
 .vk-navbar-nav-dropdown {
   margin-top: 0 !important
