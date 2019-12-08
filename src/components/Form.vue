@@ -20,12 +20,23 @@
             </div>
         </fieldset>
 
-        <vk-button
-            value="Submit"
-            size="small"
-            :disabled='check_disable'>
-            {{ $t('form.send') }}
-        </vk-button>
+        <div>
+            <vk-button
+                @click="send_email"
+                class="uk-align-right"
+                value="Submit"
+                size="small"
+                :disabled='check_disable'>
+                {{ $t('form.send') }}
+            </vk-button>
+
+            <ul class="uk-dotnav ">
+                <li :class="{ 'uk-active': !check_firstname }" uk-tooltip="title: Firstname; pos: bottom-right"><a></a></li>
+                <li :class="{ 'uk-active': !check_lastname }" uk-tooltip="title: Lastname; pos: bottom-right"><a></a></li>
+                <li :class="{ 'uk-active': !check_mail }" uk-tooltip="title: Mail; pos: bottom-right"><a></a></li>
+                <li :class="{ 'uk-active': !check_message }" uk-tooltip="title: Message; pos: bottom-right"><a></a></li>
+            </ul>
+        </div>
 
     </form>
 </template>
@@ -40,7 +51,8 @@ export default {
             firstname: null,
             lastname: null,
             mail: null,
-            message: null
+            message: null,
+            validate_array: []
         }
     },
     validations: {
@@ -62,16 +74,36 @@ export default {
             minLength: minLength(1)
         }
     },
+    methods: {
+        send_email() {
+            this.reset_modeles()
+        },
+        reset_modeles() {
+            this.firstname = null,
+            this.lastname = null,
+            this.mail = null,
+            this.message = null
+        }
+    },
     computed: {
-        check_disable() {
+        check_firstname() {
             return this.$v.firstname.$error || 
-            this.$v.firstname.$model === null || 
-            this.$v.lastname.$error || 
-            this.$v.lastname.$model === null || 
-            this.$v.mail.$error || 
-            this.$v.mail.$model === null || 
-            this.$v.message.$error || 
+            this.$v.firstname.$model === null
+        },
+        check_lastname() {
+            return this.$v.lastname.$error || 
+            this.$v.lastname.$model === null
+        },
+        check_mail() {
+            return this.$v.mail.$error || 
+            this.$v.mail.$model === null
+        },
+        check_message() {
+            return this.$v.message.$error || 
             this.$v.message.$model === null
+        },
+        check_disable() {
+            return this.check_firstname || this.check_lastname || this.check_mail || this.check_message ? true : false
         }
     }
 }   
