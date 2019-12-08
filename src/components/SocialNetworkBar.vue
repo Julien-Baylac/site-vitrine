@@ -33,6 +33,11 @@ export default {
                     ref: 'https://twitter.com/julien_baylac',
                     tooltip: '@julien_baylac'
                 },
+                pinterest: {
+                    icon: 'pinterest',
+                    ref: 'https://www.pinterest.fr/oowpinterest',
+                    tooltip: 'oowpinterest'
+                },
                 github: {
                     icon: 'github',
                     ref: 'https://github.com/Julien-Baylac',
