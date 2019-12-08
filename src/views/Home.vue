@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <p>home --------></p>
+  <div class="uk-position-center">
+    <p>{{ $t('nav.home') }}</p>
   </div>
 </template>
 

@@ -1,5 +1,6 @@
 <template>
-  <div class="about">
+  <div class="uk-position-center">
+    <p>{{ $t('nav.about') }}</p>
   </div>
 </template>
 

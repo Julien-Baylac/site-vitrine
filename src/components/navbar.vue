@@ -30,9 +30,12 @@
         <vk-navbar-nav-dropdown :title="$t('nav.translate')" slot='right' navbar-aligned align="right">
           <vk-navbar-nav-dropdown-nav class="uk-align-right translation">
             <vk-nav-item :title="$t('locales.lang')" active></vk-nav-item>
-            <vk-nav-item :title="$t('locales.fr')" @click="change_lang('fr')"></vk-nav-item>
-            <vk-nav-item :title="$t('locales.en')" @click="change_lang('en')"></vk-nav-item>
-            <vk-nav-item :title="$t('locales.ru')" @click="change_lang('ru')"></vk-nav-item>
+            <vk-nav-item 
+              v-for="(lang, index) in lang_datas" :key="index"
+              :title="$t(lang.title)" 
+              @click="change_lang(lang.id)"
+            >
+            </vk-nav-item>
           </vk-navbar-nav-dropdown-nav>
         </vk-navbar-nav-dropdown>
         </vk-navbar-nav>
@@ -41,12 +44,24 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'navbar',
+  data() {
+    return {
+    }
+  },
   methods: {
     change_lang(lang) {
+      localStorage.lang = lang
       return this.$store.commit('change_lang', lang)
     }
+  },
+  computed: {
+    ...mapState([
+      'lang_datas'
+    ])
   }
 }
 </script>
@@ -63,8 +78,5 @@ a {
   a {
     text-align : right
   }
-}
-.vk-navbar-nav-dropdown {
-  margin-top: 0 !important
 }
 </style>

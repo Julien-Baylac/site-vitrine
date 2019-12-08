@@ -1,4 +1,6 @@
 export default {
+    id: 'en',
+    title: 'locales.en',
     form: {
         message: 'You can also contact me via my website through this form',
         firstname: 'First name',

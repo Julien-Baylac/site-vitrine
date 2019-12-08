@@ -1,4 +1,6 @@
 export default {
+    id: 'ru',
+    title: "locales.ru",
     form: {
         message: 'Вы также можете связаться со мной через мой сайт через эту форму',
         firstname: 'имя',

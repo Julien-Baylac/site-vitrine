@@ -14,7 +14,7 @@ Vue.use(VuikitIcons)
 Vue.use(VueI18n)
 
 const i18n = new VueI18n({
-  locale: store.state.lang,
+  locale: store.getters.actual_lang,
   messages: locales
 })
 
