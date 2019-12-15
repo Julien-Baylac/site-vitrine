@@ -1,44 +1,44 @@
 <template>
-        <form>
+    <div>
+            <form>
+            <fieldset class="uk-fieldset">
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: user"></span>
+                        <input class="uk-input" type="text" :placeholder="$t('form.firstname')" v-model.trim="$v.firstname.$model">
+                    </div>
+                    <div class="uk-inline left-space">
+                        <input class="uk-input" type="text" :placeholder="$t('form.lastname')" v-model.trim="$v.lastname.$model">
+                    </div>
+                    <div class="uk-inline left-space">
+                        <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                        <input class="uk-input uk-input uk-form-width-large" type="email" :placeholder="$t('form.mail')" v-model.trim="$v.mail.$model">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <textarea class="uk-textarea" rows="5" :placeholder="$t('form.yourMessage')" v-model.trim="$v.message.$model"></textarea>
+                </div>
+            </fieldset>
 
-        <fieldset class="uk-fieldset">
-            <div class="uk-margin">
-                <div class="uk-inline">
-                    <span class="uk-form-icon" uk-icon="icon: user"></span>
-                    <input class="uk-input" type="text" :placeholder="$t('form.firstname')" v-model.trim="$v.firstname.$model">
-                </div>
-                <div class="uk-inline left-space">
-                    <input class="uk-input" type="text" :placeholder="$t('form.lastname')" v-model.trim="$v.lastname.$model">
-                </div>
-                <div class="uk-inline left-space">
-                    <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                    <input class="uk-input uk-input uk-form-width-large" type="email" :placeholder="$t('form.mail')" v-model.trim="$v.mail.$model">
-                </div>
+            <div>
+                <vk-button
+                    class="uk-align-right"
+                    value="Submit"
+                    size="small"
+                    :disabled='check_disable'>
+                    {{ $t('form.send') }}
+                </vk-button>
+
+                <ul class="uk-dotnav">
+                    <li :class="{ 'uk-active': !check_firstname }" :uk-tooltip="$t('form.firstname')"><a></a></li>
+                    <li :class="{ 'uk-active': !check_lastname }" :uk-tooltip="$t('form.lastname')"><a></a></li>
+                    <li :class="{ 'uk-active': !check_mail }" :uk-tooltip="$t('form.mail')"><a></a></li>
+                    <li :class="{ 'uk-active': !check_message }" :uk-tooltip="$t('form.yourMessage')"><a></a></li>
+                </ul>
             </div>
-            <div class="uk-margin">
-                <textarea class="uk-textarea" rows="5" :placeholder="$t('form.yourMessage')" v-model.trim="$v.message.$model"></textarea>
-            </div>
-        </fieldset>
 
-        <div>
-            <vk-button
-                @click="send_email"
-                class="uk-align-right"
-                value="Submit"
-                size="small"
-                :disabled='check_disable'>
-                {{ $t('form.send') }}
-            </vk-button>
-
-            <ul class="uk-dotnav ">
-                <li :class="{ 'uk-active': !check_firstname }" uk-tooltip="title: Firstname; pos: bottom-right"><a></a></li>
-                <li :class="{ 'uk-active': !check_lastname }" uk-tooltip="title: Lastname; pos: bottom-right"><a></a></li>
-                <li :class="{ 'uk-active': !check_mail }" uk-tooltip="title: Mail; pos: bottom-right"><a></a></li>
-                <li :class="{ 'uk-active': !check_message }" uk-tooltip="title: Message; pos: bottom-right"><a></a></li>
-            </ul>
-        </div>
-
-    </form>
+        </form>
+    </div>
 </template>
 
 <script>
@@ -52,7 +52,8 @@ export default {
             lastname: null,
             mail: null,
             message: null,
-            validate_array: []
+            validate_array: [],
+            messages: ['wow']
         }
     },
     validations: {
@@ -77,6 +78,7 @@ export default {
     methods: {
         send_email() {
             this.reset_modeles()
+            this.messages.push('Message')
         },
         reset_modeles() {
             this.firstname = null,
