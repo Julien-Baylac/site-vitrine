@@ -13,11 +13,11 @@
         <vk-navbar-nav-dropdown :title="$t('nav.about')" :delay-hide='delay'>
           <vk-navbar-nav-dropdown-nav>
             <vk-nav-item :title="$t('nav.about')" active></vk-nav-item>
-            <router-link to="/about"><vk-nav-item :title="$t('nav.about')"></vk-nav-item></router-link>
-            <vk-nav-item-header title="Header"></vk-nav-item-header>
-            <vk-nav-item title="Item"></vk-nav-item>
-            <vk-nav-item title="Item"></vk-nav-item>
+            <router-link to="/about"><vk-nav-item title="Curriculum Vitae"></vk-nav-item></router-link>
             <vk-nav-item-divider></vk-nav-item-divider>
+            <vk-nav-item title="Mes projets" active></vk-nav-item>
+            <vk-nav-item title="Projets artistiques"></vk-nav-item>
+            <vk-nav-item title="En entreprise"></vk-nav-item>
             <vk-nav-item title="Item"></vk-nav-item>
           </vk-navbar-nav-dropdown-nav>
           <vk-navbar-nav-dropdown-nav>
@@ -33,7 +33,7 @@
             <vk-nav-item 
               v-for="(lang, index) in lang_datas" :key="index"
               :title="$t(lang.title)" 
-              @click="change_lang(lang.id)"
+              @click="change_lang(lang.id), reload()"
             >
             </vk-nav-item>
           </vk-navbar-nav-dropdown-nav>
@@ -59,6 +59,9 @@ export default {
     change_lang(lang) {
       localStorage.lang = lang
       return this.$store.commit('change_lang', lang)
+    },
+    reload() {
+      return document.location.reload(true);
     }
   },
   computed: {
