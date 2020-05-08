@@ -11,14 +11,29 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import('@/views/About.vue')
+    path: '/art_projects',
+    name: 'art_projects',
+    component: () => import('@/views/ArtProjects.vue')
+  },
+  {
+    path: '/in_compagny',
+    name: 'in_compagny',
+    component: () => import('@/views/InCompagny.vue')
+  },
+  {
+    path: '/my_projects',
+    name: 'my_projects',
+    component: () => import('@/views/MyProjects.vue')
   },
   {
     path: '/contact',
     name: 'contact',
     component: () => import('@/views/Contact.vue')
+  },
+  {
+    path: '/curriculumvitae',
+    name: 'curriculumvitae',
+    component: () => import('@/views/CV.vue')
   }
 ]
 

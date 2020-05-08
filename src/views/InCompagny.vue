@@ -1,11 +1,11 @@
 <template>
   <div class="uk-position-center">
-    <p>{{ $t('nav.about') }}</p>
+    <p>{{ $t('nav.in_compagny') }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'about',
+  name: 'in_compagny',
 }
 </script>

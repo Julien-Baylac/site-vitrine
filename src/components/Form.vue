@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="uk-margin">
-                    <textarea class="uk-textarea" rows="5" :placeholder="$t('form.yourMessage')" v-model.trim="$v.message.$model"></textarea>
+                    <textarea class="uk-textarea" rows="7" :placeholder="$t('form.yourMessage')" v-model.trim="$v.message.$model"></textarea>
                 </div>
             </fieldset>
 

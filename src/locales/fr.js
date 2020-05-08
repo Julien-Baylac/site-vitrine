@@ -14,7 +14,12 @@ export default {
         about: 'A propos',
         translate: 'Traduction',
         contact: 'Contact',
-        contact_form: 'Formulaire de contact'
+        contact_form: 'Formulaire de contact',
+        curriculumvitae: 'Curriculum Vitae',
+        portfolio: 'Portfolio',
+        art_projects: 'Projets artistiques',
+        in_compagny: 'En entreprise',
+        my_projects: 'Mes projets'
     },
     locales: {
         lang: 'Langues',
