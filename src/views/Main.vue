@@ -17,10 +17,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .navbar {
-  padding-top: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 </style>

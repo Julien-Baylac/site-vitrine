@@ -1,5 +1,5 @@
 <template>
-  <vk-navbar-dropbar mode='push'>
+  <vk-navbar-dropbar>
     <vk-navbar transparent>
       <vk-navbar-nav class="menu">
         <vk-navbar-nav-item :title="$t('nav.home')" class="link" href='/'></vk-navbar-nav-item>
@@ -69,6 +69,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.dropdown {
+  margin-top: -10px;
+}
 .divider {
   margin-top: 15px;
 }
@@ -92,5 +95,15 @@ a {
   .langs {
     line-height: 1.1;
   }
+}
+</style>
+
+<style lang="scss">
+.uk-navbar-dropbar {
+  background-color: transparent !important;
+}
+.uk-navbar-dropbar-slide, .uk-navbar-dropbar-slide {
+  -webkit-box-shadow: none !important; 
+  box-shadow: none !important;
 }
 </style>

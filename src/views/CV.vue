@@ -1,15 +1,12 @@
 <template>
-  <div class="uk-position-center">
-    <p>{{ $t('nav.curriculumvitae') }}</p>
-  </div>
+<div class="container">
+</div>
+
 </template>
 
 <script>
 export default {
-    name: 'curriculumvitae'
 }
 </script>
 
-<style>
-
-</style>
+<style lang="scss"></style>
