@@ -15,10 +15,10 @@
 
 ### Project setup
 ```
-### To install
+- To install
 npm i
 
-### To run
+- To run
 npm run dev
 ```
 
