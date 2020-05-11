@@ -1,41 +1,36 @@
 <template>
-  <vk-navbar-dropbar>
-    <vk-navbar transparent>
-      <vk-navbar-nav class="menu">
-        <vk-navbar-nav-item :title="$t('nav.home')" class="link" href='/'></vk-navbar-nav-item>
-        <vk-navbar-nav-dropdown :title="$t('nav.about')" :delay-hide='delay'>
-          <vk-navbar-nav-dropdown-nav
-          class="dropdown">
-            <vk-nav-item class="title" :title="$t('nav.portfolio')" active></vk-nav-item>
-            <router-link to="/art_projects"><vk-nav-item class="project-type" :title="$t('nav.art_projects')"></vk-nav-item></router-link>
-            <router-link to="/in_compagny"><vk-nav-item class="project-type" :title="$t('nav.in_compagny')"></vk-nav-item></router-link>
-            <router-link to="/my_projects"><vk-nav-item class="project-type" :title="$t('nav.my_projects')"></vk-nav-item></router-link>
-            <vk-nav-item-divider class="divider"></vk-nav-item-divider>
-            <vk-nav-item class="title" :title="$t('nav.about')" active></vk-nav-item>
-            <router-link to="/curriculumvitae"><vk-nav-item :title="$t('nav.curriculumvitae')"></vk-nav-item></router-link>
-          </vk-navbar-nav-dropdown-nav>
-          <vk-navbar-nav-dropdown-nav>
-            <vk-nav-item class="title" :title="$t('nav.contact')" active></vk-nav-item>
-            <router-link to="/contact"><vk-nav-item :title="$t('nav.contact_form')"></vk-nav-item></router-link>
-          </vk-navbar-nav-dropdown-nav>
-        </vk-navbar-nav-dropdown>
-        </vk-navbar-nav>
-        <vk-navbar-nav slot="right" class="translate">
-        <vk-navbar-nav-dropdown :title="$t('nav.translate')" slot='right' navbar-aligned align="right" :delay-hide='delay'>
-          <vk-navbar-nav-dropdown-nav class="uk-align-right translation dropdown">
-            <vk-nav-item class="title" :title="$t('locales.lang')" active></vk-nav-item>
-            <vk-nav-item 
-              v-for="(lang, index) in lang_datas" :key="index"
-              :title="$t(lang.title)"
-              class="langs"
-              @click="change_lang(lang.id), reload()"
-            >
-            </vk-nav-item>
-          </vk-navbar-nav-dropdown-nav>
-        </vk-navbar-nav-dropdown>
-        </vk-navbar-nav>
-    </vk-navbar>
-  </vk-navbar-dropbar>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
 </template>
 
 <script>
@@ -69,41 +64,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.dropdown {
-  margin-top: -10px;
-}
-.divider {
-  margin-top: 15px;
-}
-.title {
-  margin-bottom: 6px;
-}
-.project-type {
-  margin-bottom: 5px;
-}
-a {
-  :hover {
-    color: black;
-  }
-  color: grey;
-  text-decoration: none !important
-}
-.translation {
-  a {
-    text-align : right
-  }
-  .langs {
-    line-height: 1.1;
-  }
-}
-</style>
 
-<style lang="scss">
-.uk-navbar-dropbar {
-  background-color: transparent !important;
-}
-.uk-navbar-dropbar-slide, .uk-navbar-dropbar-slide {
-  -webkit-box-shadow: none !important; 
-  box-shadow: none !important;
-}
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div>
-            <form>
+        <form>
             <fieldset class="uk-fieldset">
                 <div class="uk-margin">
                     <div class="uk-inline">
@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="uk-margin">
-                    <textarea class="uk-textarea" rows="9" :placeholder="$t('form.yourMessage')" v-model.trim="$v.message.$model"></textarea>
+                    <textarea class="uk-textarea" rows="7" :placeholder="$t('form.yourMessage')" v-model.trim="$v.message.$model"></textarea>
                 </div>
             </fieldset>
 
@@ -28,7 +28,6 @@
                     :disabled='check_disable'>
                     {{ $t('form.send') }}
                 </vk-button>
-
                 <ul class="uk-dotnav">
                     <li :class="{ 'uk-active': !check_firstname }" :uk-tooltip="$t('form.firstname')"><a></a></li>
                     <li :class="{ 'uk-active': !check_lastname }" :uk-tooltip="$t('form.lastname')"><a></a></li>
@@ -36,7 +35,6 @@
                     <li :class="{ 'uk-active': !check_message }" :uk-tooltip="$t('form.yourMessage')"><a></a></li>
                 </ul>
             </div>
-
         </form>
     </div>
 </template>

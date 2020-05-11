@@ -10,8 +10,10 @@
   "dependencies": {
     "@vuikit/icons": "^0.8.1",
     "@vuikit/theme": "^0.8.1",
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.13.1",
     "core-js": "^3.4.3",
-    "vue": "^2.6.10",
+    "vue": "^2.6.11",
     "vue-i18n": "^8.15.1",
     "vue-router": "^3.1.3",
     "vuelidate": "^0.7.4",
@@ -20,7 +22,6 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
-    "@vue/cli-plugin-eslint": "^4.1.0",
     "@vue/cli-plugin-router": "^4.1.0",
     "@vue/cli-plugin-vuex": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
@@ -30,7 +31,7 @@
     "lint-staged": "^9.4.3",
     "sass": "^1.23.7",
     "sass-loader": "^8.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.11"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
