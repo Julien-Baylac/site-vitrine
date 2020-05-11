@@ -4,7 +4,7 @@
 ### Technos used
 > Vue CLI - https://cli.vuejs.org/
 
-> Vuikit - https://vuikit.js.org/ & Uikit https://getuikit.com/
+> Bootstrap-Vue - https://bootstrap-vue.org/
 
 > Vue Router (to use the router) - https://router.vuejs.org/
 
