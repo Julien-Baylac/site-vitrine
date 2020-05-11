@@ -1,68 +1,51 @@
 <template>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Portfolio</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+      <li class="nav-item" v-for="(tab, index) in menu" :key="index">
+        <a class="nav-link" href="#"
+            :class="tab.title">
+            {{ $t('tab') }}
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <TranslateButton/>
   </div>
 </nav>
 </template>
 
 <script>
+import TranslateButton from '@/components/TranslateButton'
 import { mapState } from 'vuex'
+import { pick } from 'lodash'
 
 export default {
   name: 'navbar',
-  data() {
-    return {
-      // delay to hide the drop down nav
-      delay: 1
-    }
+  components: {
+    TranslateButton
   },
-  methods: {
-    // to change the language in the store
-    change_lang(lang) {
-      localStorage.lang = lang
-      return this.$store.commit('change_lang', lang)
-    },
-    reload() {
-      return document.location.reload(true);
-    }
+  mounted() {
+    console.log(this.menu)
   },
   computed: {
     ...mapState([
       // get all datas of languages files
       'lang_datas'
-    ])
-  }
+    ]),
+    menu() {
+      const menu = pick(this.lang_datas, localStorage.lang);
+      return menu.nav
+    }
+  } 
 }
 </script>
 
 <style lang="scss" scoped>
-
+.navbar-nav {
+  margin-left: 2em;
+}
 </style>

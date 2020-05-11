@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-      <Main></Main>
-  </div>
+    <Navbar class="navbar"></Navbar>
+    <router-view class="router-view"></router-view>  </div>
 </template>
 
 <script>
-import Main from '@/views/Main'
+import Navbar from '@/components/Navbar'
 
 export default {
   components: {
-      Main
+    Navbar
   }
 }
 </script>

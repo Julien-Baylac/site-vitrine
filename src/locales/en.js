@@ -14,16 +14,10 @@ export default {
         about: 'About',
         translate: 'Translate',
         contact: 'Contact',
-        contact_form: 'Contact form',
-        curriculumvitae: 'Curriculum Vitae',
-        portfolio: 'Portfolio',
-        art_projects: 'Art projects',
-        in_compagny: 'In agency',
-        my_projects: 'My projects'
     },
     locales: {
-        lang: 'Languages',
-        fr: 'French',
+        lang: 'Translate',
+        fr: 'French',   
         en: 'English',
         ru: 'Russian'
     }
