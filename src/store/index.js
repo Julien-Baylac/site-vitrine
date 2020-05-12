@@ -11,8 +11,11 @@ export default new Vuex.Store({
     lang_datas: locales
   },
   getters: {
-    actual_lang: state => {
+    local_lang: state => {
       return state.langs.includes(state.lang) ? state.lang : 'en'
+    },
+    local_lang_datas: state =>  {
+      return state.lang_datas[localStorage.lang]
     }
   },
   mutations: {

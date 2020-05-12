@@ -1,15 +1,5 @@
 <template>
-    <div class="social-network-bar">
-        <vk-icon-button 
-            v-for="(button, key) in socials" :key="key"
-            :href="button.ref" 
-            target="_blank" 
-            class="uk-margin-small-right" 
-            :icon="button.icon" 
-            :uk-tooltip="button.tooltip"
-        >
-        </vk-icon-button>
-    </div>
+<div>e</div>
 </template>
 
 <script>

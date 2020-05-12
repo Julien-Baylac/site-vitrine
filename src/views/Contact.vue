@@ -1,11 +1,9 @@
 <template>
-  <div class="contact uk-position-center">
-    <div class="">
-      <SocialNetworkBar class="uk-position-right"></SocialNetworkBar>
-    </div>
-    <hr>
+  <div class="contact container mx-auto">
     <p>{{ $t('form.message') }}</p>
-    <Form class="form"></Form>
+    <div class="justify-content-center">
+      <Form class="form"/>
+    </div>
   </div>
 </template>
 
@@ -20,7 +18,7 @@ export default {
     SocialNetworkBar
   },
   data () {
-    return {
+    return {  
         locale: 'en'
     }
 },
@@ -28,11 +26,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-hr {
-  margin-top: 60px;
-  margin-bottom: 40px
-}
-.mail-contact {
-  display: flex
+.contact {
+  margin: 3em 3em;
 }
 </style>

@@ -1,15 +1,19 @@
 <template>
   <div id="app">
     <Navbar class="navbar"></Navbar>
-    <router-view class="router-view"></router-view>  </div>
+    <router-view class="router-view"></router-view>
+    <Footer class="footer"></Footer>
+  </div>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 export default {
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
 }
 </script>

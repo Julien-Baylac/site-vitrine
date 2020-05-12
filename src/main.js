@@ -9,19 +9,20 @@ import Vuelidate from 'vuelidate'
 import { locales } from '@/locales'
 import '@vuikit/theme'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import { initFilters } from '@/utils/filters'
+
 
 Vue.config.productionTip = false
 Vue.use(Vuikit)
 Vue.use(VuikitIcons)
 Vue.use(VueI18n)
 Vue.use(Vuelidate)
-// Install BootstrapVue
 Vue.use(BootstrapVue)
-// Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
+Vue.use(initFilters)
 
 const i18n = new VueI18n({
-  locale: store.getters.actual_lang,
+  locale: store.getters.local_lang,
   messages: locales
 })
 

@@ -9,14 +9,14 @@ export default {
         yourMessage: 'Your message...',
         send: 'Send'
     },
-    nav: {
-        home: 'Home',
-        about: 'About',
-        translate: 'Translate',
-        contact: 'Contact',
+    tabs: {
+        home: 'home',
+        about: 'about',
+        translate: 'translate',
+        contact: 'contact',
     },
+    translate: 'Translate',
     locales: {
-        lang: 'Translate',
         fr: 'French',   
         en: 'English',
         ru: 'Russian'
