@@ -31,7 +31,13 @@
     },
     computed: {
       validation() {
-        return this.userId.length > 2 && this.userId.length < 17
+        if (this.userId.length > 2 && this.userId.length < 17) {
+          return true
+        } else if (this.userId.length == 0) {
+          return null
+        } else {
+          return false
+        } 
       }
     }
   }
