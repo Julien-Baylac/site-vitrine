@@ -2,13 +2,13 @@
   <div class="name-input">
     <b-form  @submit.stop.prevent>
       <div class="d-flex justify-content-between">
-        <label for="feedback-user">Name</label>
+        <label for="feedback-user">{{ input_title }}</label>
         <div class="messages">
           <b-form-invalid-feedback :state="validation">
-              Must be 5-12 characters long.
+              {{ $t('form.name_input.error_message') }}
           </b-form-invalid-feedback>
           <b-form-valid-feedback :state="validation">
-            Looks Good.
+            {{ $t('form.name_input.validation_message') }}
           </b-form-valid-feedback>
           </div>
       </div>
@@ -21,8 +21,13 @@
   export default {
     data() {
       return {
-        userId: ''
+        userId: '',
+        error_message: 'Must be 5-12 characters long.',
+        validation_message: 'Looks Good.'
       }
+    },
+    props: {
+      input_title: String
     },
     computed: {
       validation() {

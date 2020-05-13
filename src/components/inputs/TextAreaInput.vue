@@ -4,7 +4,7 @@
       id="textarea-state"
       v-model="text"
       :state="text.length >= 10"
-      placeholder="Enter at least 10 characters"
+      :placeholder="$t('form.textarea_message')"
       rows="3"
     ></b-form-textarea>
   </div>

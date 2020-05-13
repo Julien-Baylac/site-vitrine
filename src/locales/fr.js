@@ -2,11 +2,15 @@ export default {
     id: 'fr',
     title: "locales.fr",
     form: {
-        message: 'Vous pouvez également me contacter via mon site au travers de ce formulaire',
-        firstname: 'Prénom',
-        lastname: 'Nom',
+        title_message: 'Vous pouvez aussi m\'envoyer un message depuis ce site via ce formulaire',
+        name_input: {
+            error_message: 'Doit comporter entre 5-12 caracteres.',
+            validation_message: 'Semble correct',
+            firstname: 'Prénom',
+            lastname: 'Nom'
+        },
         mail: 'Mail',
-        yourMessage: 'Votre message...',
+        textarea_message: 'Votre message... (au moins 10 caracteres)',
         send: 'Envoyer'
     },
     tabs: {

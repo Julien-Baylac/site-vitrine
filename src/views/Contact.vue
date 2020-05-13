@@ -1,6 +1,6 @@
 <template>
   <div class="contact container mx-auto">
-    <p>{{ $t('form.message') }}</p>
+    <p>{{ $t('form.title_message') }}</p>
     <div class="justify-content-center">
       <Form class="form"/>
     </div>

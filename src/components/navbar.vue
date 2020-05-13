@@ -22,7 +22,6 @@
 <script>
 import TranslateButton from '@/components/buttons/TranslateButton'
 import { mapGetters } from 'vuex'
-import { capitalize } from '@/utils/filters'
 
 export default {
   name: 'navbar',

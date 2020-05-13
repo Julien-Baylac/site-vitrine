@@ -2,11 +2,15 @@ export default {
     id: 'en',
     title: 'locales.en',
     form: {
-        message: 'You can also contact me via my website through this form',
-        firstname: 'First name',
-        lastname: 'Last name',
+        title_message: 'You can also contact me via my website through this form',
+        name_input: {
+            error_message: 'Must be 5-12 characters long.',
+            validation_message: 'Looks Good.',
+            firstname: 'Firstname',
+            lastname: 'Lastname'
+        },
         mail: 'Mail',
-        yourMessage: 'Your message...',
+        textarea_message: 'Your message... (at least 10 characters)',
         send: 'Send'
     },
     tabs: {
