@@ -20,6 +20,8 @@ export default {
         contact: 'контакт'
     },
     translate: 'перевести',
+    scroll: 'свиток',
+    see_more: 'узнать больше',
     locales: {
         fr: 'французский',
         en: 'английский',

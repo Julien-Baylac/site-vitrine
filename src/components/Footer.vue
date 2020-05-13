@@ -4,23 +4,25 @@
             <div class="row">
                 <div class="col-md-4 col-xs-12">
                     <div class="first">
-                        <h4>My Skills</h4>
-                        <p> Analytical Skills</p>
-                        <p> Problem-solving skills</p>
-                        <p> Critical-thinking skills</p>
-                        <p> Detail-oriented</p>
-                        <p> Multitasking</p>
-                        <p> Self-motivated</p>
+                        <h4>Projets</h4>
+                        <ArrowButton class="project-link"></ArrowButton><br>
+                        <ArrowButton class="project-link"></ArrowButton><br>
+                        <ArrowButton class="project-link"></ArrowButton><br>
+                        <ArrowButton class="project-link"></ArrowButton><br>
+                        <ArrowButton class="project-link"></ArrowButton><br>
                     </div>
                 </div>
                 <div class="col-md-4 col-xs-12">
                     <div class="second">
                         <h4> Navigate</h4>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li class="nav-item" v-for="(tab, index) in local_lang_datas.tabs" :key="index">
+                                <a class="nav-link"
+                                    :class="index+'-tab'"
+                                    :href="'#'+index">
+                                    {{ tab | capitalize }}
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -28,11 +30,10 @@
                     <div class="third">
                         <h4> Contact</h4>
                         <ul>
-                            <li>Andreea Mihaela Bunget </li>
+                            <li>Julien Baylac</li>
                             <li></li>
-                          <li><i class="far fa-envelope"></i> andreea@andreeabunget.co.uk</li>
-                            <li><i class="far fa-envelope"></i> email@yahoo.com</li>
-                          <li><i class="fas fa-map-marker-alt"></i> London, UK </li>
+                          <li><i class="far fa-envelope"></i>julien.baylac@protonmail.com</li>
+                          <li><i class="fas fa-map-marker-alt"></i> Rennes, France </li>
                         </ul>
                     </div>
                 </div>
@@ -53,12 +54,21 @@
 
 <script>
 import SocialNetworkBar from '@/components/SocialNetworkBar'
+import ArrowButton from '@/components/buttons/ArrowButton'
+import { mapGetters } from 'vuex'
 
 export default {
     name: 'footer',
     components: {
-        SocialNetworkBar
-    }
+        SocialNetworkBar,
+        ArrowButton
+    },
+      computed: {
+    ...mapGetters([
+      /** get all datas of languages files. */
+      'local_lang_datas'
+    ])
+  }
 }
 </script>
 
@@ -77,8 +87,6 @@ export default {
 .first {
     margin-top: 40px;
     margin-bottom: 50px;
-    color: rgb(206,206,206);
-    font-family: 'Poppins', sans-serif;
 }
 .first h4 {
     font-size: 20px;
@@ -98,12 +106,9 @@ export default {
     bottom: 0;
     left: 0;
 }
-.first p {
-    font-size: 14px;
-}
 .second {
     margin-top: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     color: rgb(206,206,206);
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -135,14 +140,13 @@ export default {
 }
 .second li {
     list-style: none;
-    padding-bottom: 20px;
 }
 .second a, .second2 a {
     color: rgb(206, 206, 206);
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
     transition: 0.2s;
 }
 .second a:hover, .second2 a:hover {
@@ -223,5 +227,11 @@ export default {
     text-align:center;
     margin-top:100px;
     margin-bottom:100px;
+}
+</style>
+<style lang="scss" scoped>
+.project-link {
+    color: rgb(206,206,206);
+    font-family: 'Poppins', sans-serif;
 }
 </style>

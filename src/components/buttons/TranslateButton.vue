@@ -39,3 +39,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.btn-secondary {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+</style>
