@@ -2,7 +2,7 @@
   <div class="name-input">
     <b-form  @submit.stop.prevent>
       <div class="d-flex justify-content-between">
-        <label for="feedback-user">{{ input_title }}</label>
+        <label for="feedback-user">{{ $t('form.mail') }}</label>
         <div class="messages">
           <b-form-invalid-feedback :state="validation">
               {{ $t('form.name_input.error_message') }}
@@ -12,7 +12,7 @@
           </b-form-valid-feedback>
           </div>
       </div>
-      <b-input v-model="userId" :state="validation" id="feedback-user" :placeholder="input_title"></b-input>
+        <b-input v-model="userId" :state="validation" id="feedback-user"></b-input>
      </b-form>
   </div>
 </template>
@@ -42,3 +42,4 @@
     }
   }
 </script>
+

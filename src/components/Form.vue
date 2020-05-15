@@ -1,11 +1,14 @@
 <template>
     <b-form class="form">
-        <div class="names justify-content-between">
-            <NameInput 
-            class='firstname-input'
-            :input_title="$t('form.name_input.firstname')"/>
-            <NameInput class='lastname-input'
-            :input_title="$t('form.name_input.lastname')"/>
+        <div class="first-inputs">
+            <div class="names justify-content-between">
+                <NameInput 
+                class='firstname-input'
+                :input_title="$t('form.name_input.firstname')"/>
+                <NameInput class='lastname-input'
+                :input_title="$t('form.name_input.lastname')"/>
+            </div>
+            <EmailInput class="email-input"/>
         </div>
         <TextAreaInput class="text-area-input"/>
         <SubmitButton class="submit-button"/>
@@ -14,6 +17,7 @@
 
 <script>
 import NameInput from '@/components/inputs/NameInput'
+import EmailInput from '@/components/inputs/EmailInput'
 import TextAreaInput from '@/components/inputs/TextAreaInput'
 import SubmitButton from '@/components/buttons/SubmitButton'
 
@@ -22,7 +26,8 @@ export default {
     components: {
         NameInput,
         TextAreaInput,
-        SubmitButton
+        SubmitButton,
+        EmailInput
     }
 }   
 </script>
@@ -38,15 +43,23 @@ export default {
     margin-top: 20px;
 }
 @media (min-width: 768px) {
+    .first-inputs {
+        display: flex;
+        justify-content: space-between;
+    }
     .names {
         display: flex;
+        width: 49.5%;
+    }
+    .email-input {
+        width: 49.5%;
     }
     .firstname-input, .lastname-input {
-        width: 49.5%;
+        width: 49%;
         margin-top: 0;
     }
     .text-area-input {
-        margin-top: 0;
+        margin-top: 0.1em;
     }   
  }
 </style>

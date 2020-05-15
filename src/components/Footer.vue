@@ -32,8 +32,8 @@
                         <ul>
                             <li>Julien Baylac</li>
                             <li></li>
-                          <li><i class="far fa-envelope"></i>julien.baylac@protonmail.com</li>
-                          <li><i class="fas fa-map-marker-alt"></i> Rennes, France </li>
+                            <li>julien.baylac@protonmail.com</li>
+                            <li>Rennes, France </li>
                         </ul>
                     </div>
                 </div>

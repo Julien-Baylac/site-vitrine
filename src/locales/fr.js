@@ -4,12 +4,12 @@ export default {
     form: {
         title_message: 'Vous pouvez aussi m\'envoyer un message depuis ce site via ce formulaire',
         name_input: {
-            error_message: 'Doit comporter entre 5-12 caracteres.',
+            error_message: '5-12 caracteres.',
             validation_message: 'Semble correct',
             firstname: 'Prénom',
             lastname: 'Nom'
         },
-        mail: 'Mail',
+        mail: 'Email',
         textarea_message: 'Votre message... (au moins 10 caracteres)',
         send: 'Envoyer'
     },

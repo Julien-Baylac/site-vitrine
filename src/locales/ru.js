@@ -4,7 +4,7 @@ export default {
     form: {
         title_message: 'Вы также можете связаться со мной через мой сайт через эту форму',
         name_input: {
-            error_message: 'Должно быть 5-12 символов.',
+            error_message: '5-12 символов.',
             validation_message: 'Выглядит хорошо.',
             firstname: 'Имя',
             lastname: 'Фамилия'
