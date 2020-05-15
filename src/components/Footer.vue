@@ -5,11 +5,13 @@
                 <div class="col-md-4 col-xs-12">
                     <div class="first">
                         <h4>Projets</h4>
-                        <ArrowButton class="project-link"></ArrowButton><br>
-                        <ArrowButton class="project-link"></ArrowButton><br>
-                        <ArrowButton class="project-link"></ArrowButton><br>
-                        <ArrowButton class="project-link"></ArrowButton><br>
-                        <ArrowButton class="project-link"></ArrowButton><br>
+                        <div class="d-flex flex-column">
+                            <ArrowButton class="project-link m-1"></ArrowButton>
+                            <ArrowButton class="project-link m-1"></ArrowButton>
+                            <ArrowButton class="project-link m-1"></ArrowButton>
+                            <ArrowButton class="project-link m-1"></ArrowButton>
+                            <ArrowButton class="project-link m-1"></ArrowButton>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-xs-12">
@@ -228,8 +230,6 @@ export default {
     margin-top:100px;
     margin-bottom:100px;
 }
-</style>
-<style lang="scss" scoped>
 .project-link {
     color: rgb(206,206,206);
     font-family: 'Poppins', sans-serif;
