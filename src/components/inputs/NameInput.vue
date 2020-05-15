@@ -12,7 +12,7 @@
           </b-form-valid-feedback>
           </div>
       </div>
-      <b-input v-model="userId" :state="validation" id="feedback-user" :placeholder="input_title"></b-input>
+      <b-input v-model="userId" :state="validation" id="feedback-user"></b-input>
      </b-form>
   </div>
 </template>
