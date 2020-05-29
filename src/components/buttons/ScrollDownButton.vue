@@ -38,8 +38,8 @@ export default {
   position: absolute;
   top: 0;
   height: 100%;
-  width: 51%;
-  background: #fff;
+  width: 52%;
+  background: black;
 }
 
 .chevron:before {
@@ -75,10 +75,10 @@ export default {
 .text {
   display: block;
   margin-top: 75px;
-  margin-left: -11px;
+  margin-left: -10px;
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-size: 12px;
-  color: #fff;
+  color: black;
   text-transform: uppercase;
   white-space: nowrap;
   opacity: .25;

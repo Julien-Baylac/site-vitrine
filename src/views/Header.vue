@@ -27,7 +27,7 @@ export default {
 @import '@/utils/scss/_colors.scss';
 
 .home {
-  background-color: black;
+  background-color: white;
   height: calc(100vh - 45px);
   .jumbotron {
       background-color: transparent;;
