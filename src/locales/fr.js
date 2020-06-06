@@ -16,7 +16,7 @@ export default {
     tabs: {
         home: 'accueil',
         about: 'à propos',
-        translate: 'traduction',
+        projects: 'mes projets',
         contact: 'contact'
     },
     translate: 'Traduire',
@@ -26,5 +26,25 @@ export default {
         fr: 'Français',
         en: 'Anglais',
         ru: 'Russe'
+    },
+    projects_types: {
+        all: 'Tout',
+        applications: 'Applications',
+        sites: 'Sites',
+        art: 'Projets Artistique'
+    },
+    projects: {
+        birdhouses: {
+            name: 'Cabanes à Oiseaux'
+        },
+        drones_gabians: {
+            name: 'Drones & Gabians'
+        },
+        memory_storage: {
+            name: 'Memory Storage'
+        },
+        souvenir_ecran: {
+            name: 'Souvenir écran'
+        }
     }
 }

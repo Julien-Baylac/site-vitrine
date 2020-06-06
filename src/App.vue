@@ -28,7 +28,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-.uk-navbar-dropdown-dropbar {
-  padding-top: 0% !important
+h1 {
+  text-align: center;
 }
 </style>

@@ -11,7 +11,6 @@ import '@vuikit/theme'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import { initFilters } from '@/utils/filters'
 
-
 Vue.config.productionTip = false
 Vue.use(Vuikit)
 Vue.use(VuikitIcons)

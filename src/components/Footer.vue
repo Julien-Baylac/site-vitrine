@@ -1,17 +1,17 @@
 <template>
-    <div class="footer">
+    <div class="footer-component">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-xs-12">
                     <div class="first">
                         <h4>Projets</h4>
-                        <div class="d-flex flex-column">
-                            <ArrowButton class="project-link m-1"></ArrowButton>
-                            <ArrowButton class="project-link m-1"></ArrowButton>
-                            <ArrowButton class="project-link m-1"></ArrowButton>
-                            <ArrowButton class="project-link m-1"></ArrowButton>
-                            <ArrowButton class="project-link m-1"></ArrowButton>
-                        </div>
+                        <div class="d-flex flex-column projects">
+                            <ArrowButton 
+                                v-for="(project, index) of projet_list"
+                                :key="index"
+                                :title='`projects.${project.name}.name`' class="project-link m-1">
+                            </ArrowButton>
+                        </div>  
                     </div>
                 </div>
                 <div class="col-md-4 col-xs-12">
@@ -33,7 +33,7 @@
                         <h4> Contact</h4>
                         <ul>
                             <li>Julien Baylac</li>
-                            <li></li>
+                            <li>+33 678 67 99 13</li>
                             <li>julien.baylac@protonmail.com</li>
                             <li>Rennes, France </li>
                         </ul>
@@ -58,18 +58,21 @@
 import SocialNetworkBar from '@/components/SocialNetworkBar'
 import ArrowButton from '@/components/buttons/ArrowButton'
 import { mapGetters } from 'vuex'
+import { Projects } from '@/utils/lists'
 
 export default {
-    name: 'footer',
+    name: 'footer-component',
     components: {
         SocialNetworkBar,
         ArrowButton
-    },
-      computed: {
+    },  
+    computed: {
     ...mapGetters([
-      /** get all datas of languages files. */
-      'local_lang_datas'
-    ])
+        'local_lang_datas'
+    ]),
+    projet_list() {
+        return Projects
+    }
   }
 }
 </script>
@@ -81,7 +84,7 @@ export default {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-.footer {
+.footer-component {
     background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("http://andreeabunget.co.uk/Img/footer.jpg");
     background-size: cover;
     
@@ -199,13 +202,15 @@ export default {
     transition: 0.2s;
     text-shadow: 1px 1px 20px rgba(0,0,0,1);
 }
-
 @media screen and (max-width:1000px) {
     .first {
         text-align: center;
+        .projects {
+            align-items: center;
+        }
     }
     .first h4::after {
-        left: 40%;
+        left: 40% !important;
     }
 }
 
@@ -232,6 +237,7 @@ export default {
 }
 .project-link {
     color: rgb(206,206,206);
+    width: 400px !important;
     font-family: 'Poppins', sans-serif;
 }
 </style>

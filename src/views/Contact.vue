@@ -1,5 +1,6 @@
 <template>
   <div class="contact container mx-auto">
+    <h1>{{ $t('tabs.contact') | capitalize }}</h1>
     <p>{{ $t('form.title_message') }}</p>
     <div class="justify-content-center">
       <Form class="form"/>
@@ -18,7 +19,7 @@ export default {
     SocialNetworkBar
   },
   data () {
-    return {  
+    return {
         locale: 'en'
     }
 },

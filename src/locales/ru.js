@@ -16,7 +16,7 @@ export default {
     tabs: {
         home: 'прием',
         about: 'около',
-        translate: 'перевести',
+        projects: 'проектов',
         contact: 'контакт'
     },
     translate: 'перевести',
@@ -26,5 +26,25 @@ export default {
         fr: 'французский',
         en: 'английский',
         ru: 'русский'
+    },
+    projects_types: {
+        all: 'все',
+        applications: 'веб приложение',
+        sites: 'сайт',
+        art: 'художественный проект'
+    },
+    projects: {
+        birdhouses: {
+            name: 'скворечники',
+        },
+        drones_gabians: {
+            name: 'Drones & Gabians',
+        },
+        memory_storage: {
+            name: 'Память для хранения'
+        },
+        souvenir_ecran: {
+            name: 'память экрана'
+        }
     }
 }   
