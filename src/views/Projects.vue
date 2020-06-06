@@ -3,23 +3,10 @@
     <h1>{{ $t('tabs.projects') | capitalize }}</h1>
     <div class="d-flex sort-button">
       <BasicButton 
-        title="all"
-        :type= null
-        v-on:type='filterProject($event)'>
-      </BasicButton>
-      <BasicButton 
-        title="applications"
-        type='application'
-        v-on:type='filterProject($event)'>
-      </BasicButton>
-      <BasicButton 
-        title="sites"
-        type='site'
-        v-on:type='filterProject($event)'>
-      </BasicButton>
-      <BasicButton 
-        title="art"
-        type='art'
+        v-for="(tab, index) of tabs"
+        :key="index"
+        :title='tab.title'
+        :type='tab.type'
         v-on:type='filterProject($event)'>
       </BasicButton>
     </div>
@@ -44,7 +31,25 @@ export default {
   name: 'projects',
   data() {
     return {  
-      project_type: null
+      project_type: null,
+      tabs: [
+        {
+          title: 'all',
+          type: null
+        },
+        {
+          title: 'applications',
+          type: 'application'
+        },
+        {
+          title: 'sites',
+          type: 'site'
+        },
+        {
+          title: 'art',
+          type: 'art'
+        }
+      ]
     }
   },
   components: { 
