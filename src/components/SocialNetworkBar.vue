@@ -51,8 +51,8 @@ export default {
 .social-button {
     display: inline-block;
     background-color: #fff;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     line-height: 40px;
     margin-left: 0 !important;
     margin-right: 14px !important;
@@ -66,23 +66,8 @@ export default {
     transition: all .35s cubic-bezier(0.31,-0.105,0.43,1.59);
 }
 
-.social-button:before {
-    content: '';
-    background-color: #000;
-    width: 120%;
-    height: 120%;
-    position: absolute;
-    top: 40%;
-    left: -120%;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    -webkit-transition: all .35s cubic-bezier(0.31,-0.105,0.43,1.79);
-    transition: all .35s cubic-bezier(0.31,-0.105,0.43,1.79);
-}
-
 .social-button .fa {
-    font-size: 26px;
+    font-size: 25px;
     vertical-align: middle;
     -webkit-transform: scale(0.75);
     -ms-transform: scale(0.75);
@@ -130,7 +115,6 @@ export default {
 }
 
 .social-button:hover .fa {
-    color: #fff;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
