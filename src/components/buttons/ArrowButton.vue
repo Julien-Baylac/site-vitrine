@@ -1,7 +1,9 @@
 <template>
-    <a href="" class="underline">
-        <span>{{ $t(title) | capitalize }}</span>
-        <svg viewBox="0 0 13 20"><polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" /></svg>
+    <a class="underline">
+        <router-link :to="router_direction" class="link">
+            <span>{{ $t(title) | capitalize }}</span>
+            <svg viewBox="0 0 13 20"><polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" /></svg>
+        </router-link>
     </a>
 </template>
 
@@ -10,11 +12,20 @@ export default {
     name: 'arrow-button',
     props: {
         title: String
+    },
+    computed: {
+        router_direction() {
+            return 'birdhouses'
+        }
     }
 }
 </script>
 
 <style lang='scss' scoped>
+.link {
+    text-decoration: none;
+    color: #cecece;
+}
 .underline {
     --line: #646B8C;
     --color: #2B3044;

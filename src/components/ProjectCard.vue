@@ -1,13 +1,15 @@
 <template>
-    <div class="project-card">
-        <a :href="link" target="_blank" rel="dofollow">
-        <div class="card-cover" v-bind:style="project_card_style">
-          <div class="card">
-        </div>
-        <p>{{ $t(project_name) | capitalize }}</p>
-        </div>
-        </a>
-    </div>
+  <router-link :to="router_direction">
+      <div class="project-card">
+          <a :href="link" target="_blank" rel="dofollow">
+          <div class="card-cover" v-bind:style="project_card_style">
+            <div class="card">
+          </div>
+          <p>{{ $t(project_name) | capitalize }}</p>
+          </div>
+          </a>
+      </div>
+  </router-link>
 </template>
 
 <script>
@@ -17,9 +19,12 @@ export default {
     link: String,
     title: String,
     type: String,
-    url_image: String
+    url_image: String,
   },
   computed: {
+    router_direction() {
+      return `/${this.title}`
+    },
     project_card_style() {
       return 'background-image: url(\'../assets/images/' + `${this.title}` + '.png\')'
     },

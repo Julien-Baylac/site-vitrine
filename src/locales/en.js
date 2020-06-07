@@ -54,7 +54,7 @@ export default {
         all: 'All',
         applications: 'Appications',
         sites: 'Sites',
-        art: 'artistic project'
+        art: 'artistics projects'
     },
     projects: {
         birdhouses: {

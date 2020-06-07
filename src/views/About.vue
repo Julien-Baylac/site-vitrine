@@ -18,7 +18,7 @@
                 </div>
                 <div class="justify-content-center text-center">
                     <img src="../assets/images/design.png" alt="" class="icon-about">
-                    <p class="title">{{ $t('about.cv.fines_arts') }}</p>
+                    <p class="title">{{ $t('about.cv.fines_arts_design') }}</p>
                     <p>{{ $t('about.cv.hight_school') }} <br>{{ $t('about.cv.of_art_and_design') }} </p>
                     <p>Marseille</p>
                 </div>
