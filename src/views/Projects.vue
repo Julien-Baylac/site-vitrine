@@ -2,13 +2,13 @@
   <div class="projects container">
     <h1>{{ $t('tabs.projects') | capitalize }}</h1>
     <div class="d-flex sort-button">
-      <BasicButton 
+      <TypeSelectionButton 
         v-for="(tab, index) of tabs"
         :key="index"
         :title='tab.title'
         :type='tab.type'
         v-on:type='filterProject($event)'>
-      </BasicButton>
+      </TypeSelectionButton>
     </div>
     <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 project-cards">
       <ProjectCard class="project-card"
@@ -24,7 +24,7 @@
 
 <script>
 import ProjectCard from '@/components/ProjectCard'
-import BasicButton from '@/components/buttons/BasicButton'
+import TypeSelectionButton from '@/components/buttons/TypeSelectionButton'
 import { Projects } from '@/utils/lists'
 
 export default {
@@ -54,7 +54,7 @@ export default {
   },
   components: { 
     ProjectCard,
-    BasicButton
+    TypeSelectionButton
   },
   computed: {
     filteredProjects() {
@@ -75,7 +75,7 @@ export default {
   padding-left: 15px;
 }
 .projects {
-  padding: 10px 20px 0px 0px;
+  padding: 40px 20px 0px 0px;
 }
 .project-card {
   padding-right: 15px;
@@ -83,5 +83,8 @@ export default {
 }
 .project-cards {
   padding-left: 30px;
+}
+h1 {
+  margin-left: 15px;
 }
 </style>  

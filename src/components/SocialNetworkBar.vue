@@ -72,8 +72,8 @@ export default {
     width: 120%;
     height: 120%;
     position: absolute;
-    top: 90%;
-    left: -150%;
+    top: 40%;
+    left: -120%;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);

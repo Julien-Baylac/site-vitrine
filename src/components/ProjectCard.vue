@@ -1,10 +1,9 @@
 <template>
     <div class="project-card">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
         <a :href="link" target="_blank" rel="dofollow">
-        <div class="card-cover" :style='card_cover_style'>
-            <div class="card">
-            </div>
+        <div class="card-cover" v-bind:style="project_card_style">
+          <div class="card">
+        </div>
         <p>{{ $t(project_name) | capitalize }}</p>
         </div>
         </a>
@@ -21,14 +20,14 @@ export default {
     url_image: String
   },
   computed: {
-    card_cover_style() {
-      return `background-image: url('${this.url_image}');`
+    project_card_style() {
+      return 'background-image: url(\'../assets/images/' + `${this.title}` + '.png\')'
     },
     project_name() {
       return `projects.${this.title}.name`
     }
   } 
-}
+} 
 </script>
 
 <style lang='scss' scoped>

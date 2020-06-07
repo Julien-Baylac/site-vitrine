@@ -27,6 +27,29 @@ export default {
         en: 'английский',
         ru: 'русский'
     },
+    about: {
+        presentation: 
+        'Suite à mes études aux Beaux Arts, et à une formation en graphisme, j\'ai passé une certification de' 
+        + 'développeur web à la Code Académie pour compléter mon expérience. Je travaille aujourd\'hui chez Néo-Soft où je ' + 
+        'participe au développement d\'un Playout pour un de ses clients.',
+        download_text: 'Скачать мое резюме',
+        download: 'Скачать',
+        linked: 'Linked',
+        linkedin_text: 'увидеть мой LinkedIn',
+        cv: {
+            graphism: 'CAP Graphisme',
+            dnap: 'DNAP Art numérique',
+            fines_arts: 'Beaux Arts',
+            fines_arts_design: 'BAC+4 Design',
+            hight_school: 'École superieure',
+            of_art_and_design: "d'art et de design",
+            certification: 'Certification Bac+2',
+            web_dev: 'Développeur Web',
+            code_ad: 'Code Académie',
+            vue: 'Formation Vue JS',
+            plb: 'Plb Formation'
+        }
+    },
     projects_types: {
         all: 'все',
         applications: 'веб приложение',

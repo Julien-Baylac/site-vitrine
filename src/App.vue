@@ -29,6 +29,9 @@ export default {
   color: #2c3e50;
 }
 h1 {
-  text-align: center;
+  width: 50%;
+  text-align: right;
+  border-bottom: 1px solid;
+  border-bottom-color: black;
 }
 </style>

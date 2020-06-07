@@ -1,17 +1,11 @@
 <template>
-<div>
     <b-button 
       type="submit" 
       variant="dark" 
       class="submit-button"
-      :href='url_href'
-      download
-      target="_blank">
-      {{ $t(`${this.title}`) }} 
-      <i :class='add_icon'></i>
+      @click="$emit('type', type)">
+      {{ $t(`projects_types.${this.title}`) }}
     </b-button>
-</div>
-
 </template>
 
 <script>
@@ -19,14 +13,7 @@ export default {
     name: 'basic-button',
     props: {
       title: String,
-      type: String,
-      icon: String,
-      url_href: String
-    },
-    computed: {
-      add_icon() {
-        return `fa fa-${this.icon} icon`
-      }
+      type: String
     }
 }
 </script>
@@ -40,13 +27,10 @@ button{
   color: #fff;
   text-transform: capitalize;
   font-family: helvetica;
-  font-size: 12px;
+  font-size: 11px;
   position: relative;
   transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
   cursor: pointer;
   display: block;
-  .icon {
-    margin-left: 8px;
-  }
 }
 </style>

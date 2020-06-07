@@ -2,7 +2,7 @@ export const Projects = [
     {
         name: 'birdhouses',
         type: 'application',
-        url_image: '../assets/images/cao.png'
+        url_image: "'../assets/images/cao.png'"
     },
     {
         name: 'drones_gabians',
@@ -15,7 +15,17 @@ export const Projects = [
         url_image: '../assets/images/cao.png'
     },
     {
-        name: 'souvenir_ecran',
+        name: 'memory_storage',
+        type: 'art',
+        url_image: '../assets/images/cao.png'
+    },
+    {
+        name: 'memory_storage',
+        type: 'art',
+        url_image: '../assets/images/cao.png'
+    },
+    {
+        name: 'memory_storage',
         type: 'art',
         url_image: '../assets/images/cao.png'
     }
