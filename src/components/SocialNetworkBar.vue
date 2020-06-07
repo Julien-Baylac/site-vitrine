@@ -2,10 +2,14 @@
     <div>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <div class="social-buttons">
-            <a href="#" class="social-button linkedin"><i class="fa fa-linkedin"></i></a>
-            <a href="#" class="social-button twitter"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="social-button vk"><i class="fa fa-vk"></i></a>
-            <a href="#" class="social-button github"><i class="fa fa-github"></i></a>
+            <a 
+                v-for="(social, index) of socials"
+                :key="index"
+                :href="social.ref" 
+                :class="`social-button ${social.icon}`"
+                target="_blank">
+                <i :class="`fa fa-${social.icon}`"></i>
+            </a>
         </div>
     </div>
 </template>
@@ -15,34 +19,25 @@ export default {
     name: 'social-network-bar',
     data() {
         return {
-            socials: {
-                mail: {
-                    icon: 'mail',
-                    ref: 'mailto:julien.baylac@protonmail.com',
-                    tooltip: 'julien.baylac@protonmail.com'
+            socials: [
+                {
+                    icon: 'vk',
+                    ref: 'https://vk.com/id496289729'
                 },
-                linkedin: {
+                {
                     icon: 'linkedin',
-                    ref: 'https://www.linkedin.com/in/julien-baylac-041600172/',
-                    tooltip: 'julien-baylac-041600172'
+                    ref: 'https://www.linkedin.com/in/julien-baylac-041600172/'
                 },
-                twitter: {
+                {
                     icon: 'twitter',
-                    ref: 'https://twitter.com/julien_baylac',
-                    tooltip: '@julien_baylac'
+                    ref: 'https://twitter.com/julien_baylac'
                 },
-                pinterest: {
-                    icon: 'pinterest',
-                    ref: 'https://www.pinterest.fr/oowpinterest',
-                    tooltip: 'oowpinterest'
-                },
-                github: {
+                {
                     icon: 'github',
-                    ref: 'https://github.com/Julien-Baylac',
-                    tooltip: 'Julien-Baylac'
+                    ref: 'https://github.com/Julien-Baylac'
                 }
-            }
-        }
+            ]
+        }       
     }
 }
 </script>
