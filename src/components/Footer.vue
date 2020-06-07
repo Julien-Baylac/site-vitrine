@@ -9,7 +9,9 @@
                             <ArrowButton 
                                 v-for="(project, index) of projet_list"
                                 :key="index"
-                                :title='`projects.${project.name}.name`' class="project-link m-1">
+                                :title='`projects.${project.name}.name`'
+                                :path='project.name'
+                                class="project-link m-1">
                             </ArrowButton>
                         </div>  
                     </div>

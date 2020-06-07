@@ -11,11 +11,12 @@
 export default {
     name: 'arrow-button',
     props: {
-        title: String
+        title: String,
+        path: String
     },
     computed: {
         router_direction() {
-            return 'birdhouses'
+            return `${this.path}`
         }
     }
 }
