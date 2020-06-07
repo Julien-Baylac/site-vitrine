@@ -73,7 +73,7 @@ export default {
     height: 120%;
     position: absolute;
     top: 40%;
-    left: -100%;
+    left: -120%;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -92,35 +92,35 @@ export default {
 }
 
 .social-button.linkedin:before {
-    background-color: #3B5998;
+    background-color: #0277b5;
 }
 
 .social-button.linkedin .fa {
-    color: #3B5998;
+    color: #0277b5;
 }
 
 .social-button.twitter:before {
-    background-color: #3CF;
+    background-color: #1da1f1;
 }
 
 .social-button.twitter .fa {
-    color: #3CF;
+    color: #1da1f1;
 }
 
 .social-button.vk:before {
-    background-color: #DC4A38;
+    background-color: #4a75a8;
 }
 
 .social-button.vk .fa {
-    color: #DC4A38;
+    color: #4a75a8;
 }
 
 .social-button.github:before {
-    background-color: #F26798;
+    background-color: #242a2f;
 }
 
 .social-button.github .fa {
-    color: #F26798;
+    color: #242a2f;
 }
 
 
