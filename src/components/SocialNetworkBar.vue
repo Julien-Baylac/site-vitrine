@@ -21,10 +21,6 @@ export default {
         return {
             socials: [
                 {
-                    icon: 'vk',
-                    ref: 'https://vk.com/id496289729'
-                },
-                {
                     icon: 'linkedin',
                     ref: 'https://www.linkedin.com/in/julien-baylac-041600172/'
                 },
