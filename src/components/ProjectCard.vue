@@ -2,7 +2,7 @@
   <router-link :to="router_direction">
       <div class="project-card">
           <a :href="link" target="_blank" rel="dofollow">
-          <div class="card-cover" v-bind:style="project_card_style">
+          <div class="card-cover" :style="{'background-image': 'url(' + require(`../assets/images/${title}.png`) + ')'}">
             <div class="card">
           </div>
           <p>{{ $t(project_name) | capitalize }}</p>
@@ -19,14 +19,13 @@ export default {
     link: String,
     title: String,
     type: String,
-    url_image: String,
   },
   computed: {
     router_direction() {
       return `/${this.title}`
     },
-    project_card_style() {
-      return 'background-image: url(\'../assets/images/' + `${this.title}` + '.png\')'
+    background_image_path() {
+      return `../images/${this.title}.png`
     },
     project_name() {
       return `projects.${this.title}.name`

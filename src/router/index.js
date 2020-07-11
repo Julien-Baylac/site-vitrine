@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Birdhouses from '../views/projects/Birdhouses.vue'
+import MemoryStorage from '../views/projects/MemoryStorage.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/birdhouses',
     name: 'birdhouses',
     component: Birdhouses
+  },
+  {
+    path: '/memory_storage',
+    name: 'memory_storage',
+    component: MemoryStorage
   }
 ]
 
