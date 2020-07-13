@@ -7,27 +7,27 @@
                 <div class="justify-content-center text-center">
                     <img src="../assets/images/graphisme.png" alt="" class="icon-about">
                     <p class="title">{{ $t('about.cv.graphism') }}</p>
-                    <p>Studio M </p>
+                    <p>Studio M</p>
                     <p>Montpellier</p>
                 </div>
                 <div class="justify-content-center text-center">
                     <img src="../assets/images/art.png" alt="" class="icon-about">
-                    <p class="title">{{ $t('about.cv.dnap') }} </p>
+                    <p class="title">{{ $t('about.cv.dnap') }}</p>
                     <p>Beaux Arts</p>
-                    <p> Avignon</p>
+                    <p>Avignon</p>
                 </div>
                 <div class="justify-content-center text-center">
                     <img src="../assets/images/design.png" alt="" class="icon-about">
                     <p class="title">{{ $t('about.cv.fines_arts_design') }}</p>
-                    <p>{{ $t('about.cv.hight_school') }} <br>{{ $t('about.cv.of_art_and_design') }} </p>
+                    <p>{{ $t('about.cv.hight_school') }} <br>{{ $t('about.cv.of_art_and_design') }}</p>
                     <p>Marseille</p>
                 </div>
                 <div class="justify-content-center text-center">
                     <img src="../assets/images/developement.png" alt="" class="icon-about">
                     <p class="title">{{ $t('about.cv.certification') }}</p>
-                    <p> {{ $t('about.cv.web_dev') }}</p>
+                    <p>{{ $t('about.cv.web_dev') }}</p>
                     <p>{{ $t('about.cv.code_ad') }}</p>
-                    <p> Rennes</p>
+                    <p>Rennes</p>
                 </div>
                 <div class="justify-content-center text-center">
                     <img src="../assets/images/vue.png" alt="" class="icon-about">
@@ -40,12 +40,12 @@
                 <div class="links col-12 d-flex justify-content-center align-items-center">
                     <div>
                     <p>{{ $t('about.download_text') }}</p>
-                    <BasicButton
+                    <DownloadButton
                         class="button"
                         title='about.download'
                         icon='download'
-                        url_href='../assets/files/cv-julien-baylac.pdf'>
-                    </BasicButton>
+                        url_download='../assets/files/cv-julien-baylac.pdf'>
+                    </DownloadButton>
                     <p class="linkedin">{{ $t('about.linkedin_text') }}</p>
                     <BasicButton
                         class="button"
@@ -62,11 +62,13 @@
 
 <script>
 import BasicButton from '@/components/buttons/BasicButton'
+import DownloadButton from '@/components/buttons/DownloadButton'
 
 export default {
     name: 'about',
     components: {
-        BasicButton
+        BasicButton,
+        DownloadButton
     }
 }
 </script>

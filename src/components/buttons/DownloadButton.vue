@@ -1,10 +1,11 @@
 <template>
 <div>
     <b-button 
+      type="download" 
       variant="dark" 
-      class="submit-button"
-      :href='url_href'
-      target="_blank">
+      class="download-button"
+      @click="download()"
+      download>
       {{ $t(`${this.title}`) }} 
       <i :class='icon_url'></i>
     </b-button>
@@ -18,12 +19,15 @@ export default {
     props: {
       title: String,
       icon: String,
-      url_href: String
+      url_download: String
     },
     computed: {
       icon_url() {
         return `fa fa-${this.icon} icon`
       }
+    },
+    methods: {
+      
     }
 }
 </script>
