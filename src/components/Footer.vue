@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-4 col-xs-12">
                     <div class="first">
-                        <h4>Projets</h4>
+                        <h4>{{ $t('tabs.projects') | capitalize }}</h4>
                         <div class="d-flex flex-column projects">
                             <ArrowButton 
                                 v-for="(project, index) of projet_list"
@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-md-4 col-xs-12">
                     <div class="second">
-                        <h4> Navigate</h4>
+                        <h4>{{ $t('navigate') | capitalize }}</h4>
                         <ul>
                             <li class="nav-item" v-for="(tab, index) in local_lang_datas.tabs" :key="index">
                                 <a class="nav-link"
@@ -32,7 +32,7 @@
                 </div>
                 <div class="col-md-4 col-xs-12">
                     <div class="third">
-                        <h4> Contact</h4>
+                        <h4>{{ $t('tabs.contact') | capitalize }}</h4>
                         <ul>
                             <li>Julien Baylac</li>
                             <li>+33 678 67 99 13</li>

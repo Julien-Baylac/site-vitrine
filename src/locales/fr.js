@@ -19,6 +19,7 @@ export default {
         projects: 'mes projets',
         contact: 'contact'
     },
+    navigate: 'Navigation',
     translate: 'Traduire',
     scroll: 'Défiler',
     see_more: 'Voir plus',

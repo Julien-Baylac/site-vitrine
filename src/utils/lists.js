@@ -14,13 +14,5 @@ export const Projects = [
     {
         name: 'souvenir_ecran',
         type: 'art'
-    },
-    {
-        name: 'memory_storage',
-        type: 'art'
-    },
-    {
-        name: 'memory_storage',
-        type: 'art'
     }
 ]

@@ -19,8 +19,9 @@ export default {
         projects: 'projects',
         contact: 'contact',
     },
-    translate: 'Translate',
-    scroll: 'Scroll',
+    navigate: 'navigate',
+    translate: 'translate',
+    scroll: 'scroll',
     see_more: 'See more',
     locales: {
         fr: 'French',   

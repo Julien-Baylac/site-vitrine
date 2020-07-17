@@ -19,6 +19,7 @@ export default {
         projects: 'проектов',
         contact: 'контакт'
     },
+    navigate: 'навигация',
     translate: 'перевести',
     scroll: 'свиток',
     see_more: 'узнать больше',
@@ -29,9 +30,9 @@ export default {
     },
     about: {
         presentation: 
-        'Suite à mes études aux Beaux Arts, et à une formation en graphisme, j\'ai passé une certification de' 
-        + 'développeur web à la Code Académie pour compléter mon expérience. Je travaille aujourd\'hui chez Néo-Soft où je ' + 
-        'participe au développement d\'un Playout pour un de ses clients.',
+        'После обучения в области изобразительного искусства и обучения графическому дизайну я прошла' +
+        'сертификацию веб-разработчика в Code Académie, чтобы завершить свой опыт. Сегодня я работаю в Néo-Soft,' +
+        'где участвую в разработке Playout для одного из своих клиентов.',
         download_text: 'Скачать мое резюме',
         download: 'Скачать',
         linked: 'Linked',
