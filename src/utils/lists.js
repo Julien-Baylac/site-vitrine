@@ -1,32 +1,26 @@
 export const Projects = [
     {
         name: 'birdhouses',
-        type: 'application',
-        url_image: "'../assets/images/cao.png'"
+        type: 'application'
     },
     {
         name: 'drones_gabians',
-        type: 'site',
-        url_image: '../assets/images/D&G.png'
+        type: 'site'
     },
     {
         name: 'memory_storage',
-        type: 'art',
-        url_image: '../assets/images/cao.png'
+        type: 'art'
+    },
+    {
+        name: 'souvenir_ecran',
+        type: 'art'
     },
     {
         name: 'memory_storage',
-        type: 'art',
-        url_image: '../assets/images/cao.png'
+        type: 'art'
     },
     {
         name: 'memory_storage',
-        type: 'art',
-        url_image: '../assets/images/cao.png'
-    },
-    {
-        name: 'memory_storage',
-        type: 'art',
-        url_image: '../assets/images/cao.png'
+        type: 'art'
     }
 ]

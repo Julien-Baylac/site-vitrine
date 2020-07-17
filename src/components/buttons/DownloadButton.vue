@@ -4,7 +4,7 @@
       type="download" 
       variant="dark" 
       class="download-button"
-      @click="download()"
+      href="@/assets/files/cv-julien-baylac.pdf"
       download>
       {{ $t(`${this.title}`) }} 
       <i :class='icon_url'></i>
@@ -25,9 +25,6 @@ export default {
       icon_url() {
         return `fa fa-${this.icon} icon`
       }
-    },
-    methods: {
-      
     }
 }
 </script>
