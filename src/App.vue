@@ -1,12 +1,11 @@
 <template>
   <div id="app">
-    <div class="alert">
-      <b-alert
-        :show="display_alert"
-        :variant="message_type">
-        <a>{{ alert_message }}</a>
-      </b-alert>
-    </div>
+    <b-alert
+      class="alert"
+      :show="display_alert"
+      :variant="message_type">
+      <a>{{ alert_message }}</a>
+    </b-alert>
     <ScrollTop class='scroll-top'/>
     <Navbar class="navbar" id="home"></Navbar>
     <router-view class="router-view"></router-view>
@@ -53,11 +52,11 @@ h1 {
   border-bottom-color: black;
 }
 .alert {
-    position: fixed;
-    top: 100;
-    right: 13px;
-    width: 20em;
-    z-index:9999;
+  position: fixed;
+  top: 3%;
+  right: 2%;
+  width: 20em;
+  z-index:9999;
 }
 .scroll-top {
   position: fixed;
