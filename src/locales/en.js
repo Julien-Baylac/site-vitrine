@@ -15,8 +15,8 @@ export default {
     },
     tabs: {
         home: 'home',
-        about: 'about',
         projects: 'projects',
+        about: 'about',
         contact: 'contact',
     },
     navigate: 'navigate',
@@ -33,10 +33,10 @@ export default {
         'Suite à mes études aux Beaux Arts, et à une formation en graphisme, j\'ai passé une certification de' 
         + 'développeur web à la Code Académie pour compléter mon expérience. Je travaille aujourd\'hui chez Néo-Soft où je ' + 
         'participe au développement d\'un Playout pour un de ses clients.',
-        download_text: 'Télécharger mon CV',
-        download: 'Télécharger',
+        download_text: 'Download my CV',
+        download: 'Download',
         linked: 'Linked',
-        linkedin_text: 'Voir mon Linkedin',
+        linkedin_text: 'Open my Linkedin',
         cv: {
             graphism: 'CAP Graphisme',
             dnap: 'DNAP Art numérique',

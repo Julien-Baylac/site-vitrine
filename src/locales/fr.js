@@ -15,8 +15,8 @@ export default {
     },
     tabs: {
         home: 'accueil',
-        about: 'Mon parcours',
         projects: 'projets',
+        about: 'Mon parcours',
         contact: 'contact'
     },
     navigate: 'Navigation',

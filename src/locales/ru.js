@@ -15,8 +15,8 @@ export default {
     },
     tabs: {
         home: 'прием',
-        about: 'около',
         projects: 'проектов',
+        about: 'около',
         contact: 'контакт'
     },
     navigate: 'навигация',

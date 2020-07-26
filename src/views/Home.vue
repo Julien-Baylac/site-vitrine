@@ -1,8 +1,8 @@
 <template>
   <div data-target="#home" data-spy="scroll">
     <Header id="header"/>
-    <About id='about'></About>
     <Projects id="projects"/>
+    <About id='about'/>
     <Contact id="contact"/>
   </div>  
 </template>

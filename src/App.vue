@@ -1,5 +1,12 @@
 <template>
   <div id="app">
+    <div class="alert">
+      <b-alert
+        :show="display_alert"
+        :variant="message_type">
+        <a>{{ alert_message }}</a>
+      </b-alert>
+    </div>
     <Navbar class="navbar" id="home"></Navbar>
     <router-view class="router-view"></router-view>
     <Footer class="footer"></Footer>
@@ -9,16 +16,24 @@
 <script>
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { mapGetters } from 'vuex'
 
 export default {
   components: {
     Navbar,
     Footer
+  },
+  computed: {
+    ...mapGetters([
+      'display_alert',
+      'alert_message',
+      'message_type'
+    ])
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss"> 
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index.scss';
 
@@ -33,5 +48,12 @@ h1 {
   text-align: right;
   border-bottom: 1px solid;
   border-bottom-color: black;
+}
+.alert {
+    position: fixed;
+    top: 100;
+    right: 13px;
+    width: 20em;
+    z-index:9999;
 }
 </style>

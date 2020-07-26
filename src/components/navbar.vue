@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     ...mapGetters([
-      /** get all datas of languages files. */
+      // get all datas of languages files.
       'local_lang_datas'
     ])
   }

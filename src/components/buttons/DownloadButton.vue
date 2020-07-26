@@ -4,8 +4,7 @@
       type="download" 
       variant="dark" 
       class="download-button"
-      href="@/assets/files/cv-julien-baylac.pdf"
-      download>
+      @click="downloadFile">
       {{ $t(`${this.title}`) }} 
       <i :class='icon_url'></i>
     </b-button>
@@ -14,6 +13,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
     name: 'basic-button',
     props: {
@@ -25,7 +26,24 @@ export default {
       icon_url() {
         return `fa fa-${this.icon} icon`
       }
-    }
+    },
+    methods: {
+      downloadFile(){
+        axios({
+          method: 'get',
+          url: './files/cv-julien-baylac.pdf',
+          responseType: 'arraybuffer'
+        })
+        .then(response => {
+          this.forceFileDownload(response)
+          this.$store.commit('display_alert', {type: 'success', message: 'Le CV a bien été téléchargé'})
+        })
+        .catch(() => {
+            this.$store.commit('display_alert', {type: 'danger', message: 'Le CV n\'a pas pu être téléchargé'})
+          }
+        )
+      }
+    } 
 }
 </script>
 
