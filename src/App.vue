@@ -7,6 +7,7 @@
         <a>{{ alert_message }}</a>
       </b-alert>
     </div>
+    <ScrollTop class='scroll-top'/>
     <Navbar class="navbar" id="home"></Navbar>
     <router-view class="router-view"></router-view>
     <Footer class="footer"></Footer>
@@ -16,12 +17,14 @@
 <script>
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import ScrollTop from '@/components/buttons/ScrollTop'
 import { mapGetters } from 'vuex'
 
 export default {
   components: {
     Navbar,
-    Footer
+    Footer,
+    ScrollTop
   },
   computed: {
     ...mapGetters([
@@ -55,5 +58,12 @@ h1 {
     right: 13px;
     width: 20em;
     z-index:9999;
+}
+.scroll-top {
+  position: fixed;
+  bottom: 5%;
+  right: 4%;
+  width: 5em;
+  z-index:9999;
 }
 </style>

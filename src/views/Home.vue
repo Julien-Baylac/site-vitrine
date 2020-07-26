@@ -1,9 +1,11 @@
 <template>
   <div data-target="#home" data-spy="scroll">
     <Header id="header"/>
-    <Projects id="projects"/>
-    <About id='about'/>
-    <Contact id="contact"/>
+    <div class="content">
+      <Projects id="projects"/>
+      <About id='about'/>
+      <Contact id="contact"/>
+    </div>
   </div>  
 </template>
 
@@ -23,3 +25,9 @@ export default {
   }
 }
 </script>
+
+<style lang='scss' scoped>
+.content {
+  background-color: white;
+}
+</style>
