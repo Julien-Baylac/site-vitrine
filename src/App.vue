@@ -53,7 +53,7 @@ h1 {
 }
 .alert {
   position: fixed;
-  top: 3%;
+  top: 2%;
   right: 2%;
   width: 20em;
   z-index:9999;
