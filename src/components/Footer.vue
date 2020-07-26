@@ -21,11 +21,13 @@
                         <h4>{{ $t('navigate') | capitalize }}</h4>
                         <ul>
                             <li class="nav-item" v-for="(tab, index) in local_lang_datas.tabs" :key="index">
-                                <a class="nav-link"
-                                    :class="index+'-tab'"
-                                    :href="'#'+index">
-                                    {{ tab | capitalize }}
-                                </a>
+                                <router-link class="router-link" to="/" v-scroll-to="`#${index}`">
+                                    <a class="nav-link"
+                                        :class="index+'-tab'"
+                                        :href="'#'+index">
+                                        {{ tab | capitalize }}
+                                    </a>
+                                </router-link>
                             </li>
                         </ul>
                     </div>

@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" v-for="(tab, index) in local_lang_datas.tabs" :key="index">
-          <router-link @scroll="scroll('contact')" class="router-link" :to="'/'">
+          <router-link class="router-link" to="/" v-scroll-to="`#${index}`">
             <a class="nav-link"
                 :class="index+'-tab'"
                 :href="'#'+index">
@@ -34,12 +34,6 @@ export default {
       /** get all datas of languages files. */
       'local_lang_datas'
     ])
-  },
-  methods: {
-    scroll(element) {   
-      let ele = document.getElementById(element)
-      window.scrollTo(ele.offsetLeft,ele.offsetTop)
-    }
   }
 }
 </script> 

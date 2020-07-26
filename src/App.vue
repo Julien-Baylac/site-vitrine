@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar class="navbar"></Navbar>
+    <Navbar class="navbar" id="home"></Navbar>
     <router-view class="router-view"></router-view>
     <Footer class="footer"></Footer>
   </div>

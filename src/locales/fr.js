@@ -16,7 +16,7 @@ export default {
     tabs: {
         home: 'accueil',
         about: 'Mon parcours',
-        projects: 'mes projets',
+        projects: 'projets',
         contact: 'contact'
     },
     navigate: 'Navigation',

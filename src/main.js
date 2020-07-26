@@ -6,6 +6,7 @@ import Vuikit from 'vuikit'
 import VuikitIcons from '@vuikit/icons'
 import VueI18n from 'vue-i18n'
 import Vuelidate from 'vuelidate'
+import VueScrollTo from 'vue-scrollto'
 import { locales } from '@/locales'
 import '@vuikit/theme'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
@@ -19,6 +20,7 @@ Vue.use(Vuelidate)
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(initFilters)
+Vue.use(VueScrollTo)
 
 const i18n = new VueI18n({
   locale: store.getters.local_lang,
