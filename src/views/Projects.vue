@@ -10,7 +10,7 @@
         v-on:type='filterProject($event)'>
       </TypeSelectionButton>
     </div>
-    <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 project-cards">
+    <div class="row row-cols-lg-2 row-cols-md-2 row-cols-1 project-cards">
       <ProjectCard class="project-card"
         v-for="(project, index) of filteredProjects" 
         :key="index" 

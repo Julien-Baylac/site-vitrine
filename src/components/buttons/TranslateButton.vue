@@ -1,5 +1,5 @@
 <template>
-    <b-dropdown id="btn-translate" :text="$t('translate') | capitalize" class="m-md-2 btn-translate" right>
+    <b-dropdown id="btn-translate btn" :text="$t('translate') | capitalize" class="m-md-2 btn-translate" right>
         <b-dropdown-item
             v-for="(lang, index) in local_lang_datas.locales" :key="index"
             :class="index+'-dropdown-tab'"
@@ -44,5 +44,9 @@ export default {
 .btn-secondary {
   background-color: transparent !important;
   border-color: transparent !important;
+  color: grey !important;
+  &:hover {
+    color: black !important;
+  }
 }
 </style>

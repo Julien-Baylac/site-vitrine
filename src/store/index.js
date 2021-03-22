@@ -21,7 +21,7 @@ export default new Vuex.Store({
       return state.langs.includes(state.lang) ? state.lang : 'en'
     },
     local_lang_datas: state =>  {
-      return state.lang_datas[localStorage.lang]
+      return state.lang_datas[state.lang]
     },
     // alerts
     display_alert: state => {

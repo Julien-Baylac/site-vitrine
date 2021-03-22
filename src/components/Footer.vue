@@ -82,6 +82,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/utils/scss/_colors.scss';
+
 * {
     margin: 0px;
     padding: 0px;
@@ -89,7 +91,7 @@ export default {
     font-family: 'Poppins', sans-serif;
 }
 .footer-component {
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("http://andreeabunget.co.uk/Img/footer.jpg");
+    background: $black;
     background-size: cover;
     
 }

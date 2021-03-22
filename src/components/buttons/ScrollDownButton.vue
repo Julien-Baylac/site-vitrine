@@ -1,16 +1,18 @@
 <template>
-	<div>
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-        <span class="text">{{ $t('scroll') }}</span>
-    </div>
+    <transition name="fade">
+        <div>
+        <div class="chevron" v-scroll-to="`#projects`"></div>
+        <div class="chevron" v-scroll-to="`#projects`"></div>
+        <div class="chevron" v-scroll-to="`#projects`"></div>
+            <span class="text"  v-scroll-to="`#projects`">{{ $t('scroll') }}</span>
+        </div>
+    </transition>
 </template>
 
 <script>
-export default {
-    name: 'scroll-down-button'
-}
+  export default {
+      name: 'scroll-down-button'
+  }
 </script>
 
 <style lang='scss' scoped>
@@ -75,7 +77,7 @@ export default {
 .text {
   display: block;
   margin-top: 75px;
-  margin-left: -10px;
+  margin-left: -11px;
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-size: 12px;
   color: black;

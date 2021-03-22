@@ -48,7 +48,9 @@ export default {
             web_dev: 'Développeur Web',
             code_ad: 'Code Académie',
             vue: 'Formation Vue JS',
-            plb: 'Plb Formation'
+            plb: 'Plb Formation',
+            istqb: 'Certification ISTQB',
+            m2i: 'M2i Formation'
         }
     },
     projects_types: {

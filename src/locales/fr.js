@@ -16,7 +16,7 @@ export default {
     tabs: {
         home: 'accueil',
         projects: 'projets',
-        about: 'Mon parcours',
+        about: 'parcours',
         contact: 'contact'
     },
     navigate: 'Navigation',
@@ -30,9 +30,9 @@ export default {
     },
     about: {
         presentation: 
-        'Suite à mes études aux Beaux Arts, et à une formation en graphisme, j\'ai passé une certification de' 
-        + 'développeur web à la Code Académie pour compléter mon expérience. Je travaille aujourd\'hui chez Néo-Soft où je ' + 
-        'participe au développement d\'un Playout pour un de ses clients.',
+          'D\'abord intéressé par les arts, j\'ai commencé mon parcours en graphisme, puis aux Beaux Arts où j\'ai découvert l\'informatique au travers de l\'exploration de la technologie comme médium de création. J\'y ai appris à developper dans des langages comme Arduino (C++) ou Processing (JAVA) pour créer des oeuvres interactives.'+
+          ' Après une année de Design, j\'ai voulu aller plus loin dans ma pratique de l\'informatique en intégrant une formation de Développeur Web.' +
+          ' J\’ai ensuite travaillé comme développeur Front End chez NéoSoft où j\’ai participé à la création et au Testing d’un Playout.',
         download_text: 'Télécharger mon CV',
         download: 'Télécharger',
         linked: 'Linked',
@@ -48,7 +48,9 @@ export default {
             web_dev: 'Développeur Web',
             code_ad: 'Code Académie',
             vue: 'Formation Vue JS',
-            plb: 'Plb Formation'
+            plb: 'Plb Formation',
+            istqb: 'Certification ISTQB',
+            m2i: 'M2i Formation'
         }
     },
     projects_types: {

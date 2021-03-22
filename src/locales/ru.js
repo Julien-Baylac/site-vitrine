@@ -44,11 +44,13 @@ export default {
             fines_arts_design: 'BAC+4 Design',
             hight_school: 'École superieure',
             of_art_and_design: "d'art et de design",
-            certification: 'Certification Bac+2',
+            certification: 'Сертификация Bac+2',
             web_dev: 'Développeur Web',
             code_ad: 'Code Académie',
-            vue: 'Formation Vue JS',
-            plb: 'Plb Formation'
+            vue: 'Подготовка Vue JS',
+            plb: 'Plb Подготовка',
+            istqb: 'Certification ISTQB',
+            m2i: 'M2i Подготовка'
         }
     },
     projects_types: {
